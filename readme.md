@@ -28,7 +28,7 @@ Los tests deberían cubrir los siguientes casos:
   - debería agregar un producto.
   - debería incrementar el id en 1 cada vez que se añada un producto.
   - debería lanzar un error si el nombre o el precio no están definidos.
-  - debería lanzar un error si el producto ya existe.
+  - debería lanzar un error si el producto ya existe.pac
 - removeProduct
   - debería eliminar un producto
   - debería lanzar un error si el producto no existe.

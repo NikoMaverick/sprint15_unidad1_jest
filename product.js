@@ -29,7 +29,7 @@ function addProduct (name, price) {
         throw new Error ('You must add a name') // Creamos error para que name sea requerido
     } 
     if (!price || typeof price === 'number' ) {
-        throw new Error ('You must add a price type number') // Creamos error para que el precio sea requerido y sea nímero
+        throw new Error ('You must add a price type number') // Creamos error para que el precio sea requerido y sea número
     }
     const productHeight = products.some(product => product.name === name);
     if(productHeight) {
