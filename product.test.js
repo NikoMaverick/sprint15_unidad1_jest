@@ -46,19 +46,19 @@ describe ('addProduct', () => {
 describe ('removeProduct', () => {
     beforeEach(() => {
         resetProducts();
+        addProduct('Product', 100)
     });
 
     // Eliminación del producto según el id
     it('Should remove the product based on the id',() => {
-        expect(removeProduct(1)).toEqual({ 
-                id: 1, 
-                Producto: 'Product1',
-                Precio: 100
-            });
-    })
+        removeProduct(1);
+        const products = getProduct();
+        expect(products.length).toEqual(0);
+    });
 
     // Genera un nuevo error si no encuentra el producto
     it('Should throw an error if it not contain the product',()=>{
-        expect(() => removeProduct(1)).toThrow("Product not found");
-    })
+        removeProduct(1)
+        expect(() => removeProduct(1)).toThrow('Product not found');
+    });
 });

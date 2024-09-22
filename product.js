@@ -47,11 +47,11 @@ function addProduct (name, price) {
 }
 // Creamos la función para eliminar un producto por su id
  function removeProduct(idRemove) {
-        const deleteProduct = products.find(product => product.id === idRemove);
-        if (deleteProduct === -1) {
-            throw new Error("Product not found");
+        const deleteProduct = products.find(product => product.id === idRemove); // Buscamos el producto por su indice
+        if (deleteProduct === -1) { 
+            throw new Error('Product not found'); // Si no exixte el producto, lanza error
         }
-        product.splice(deleteProduct, 1);
+        products.splice(deleteProduct, 1); // Con splice, eliminamos el producto del indice
         return product;
     }
 
