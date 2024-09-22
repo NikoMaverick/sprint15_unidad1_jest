@@ -45,10 +45,21 @@ function addProduct (name, price) {
     products.push(newProduct);
     return newProduct;
 }
+// Creamos la función para eliminar un producto por su id
+ function removeProduct(idRemove) {
+        const deleteProduct = products.find(product => product.id === idRemove);
+        if (deleteProduct === -1) {
+            throw new Error("Product not found");
+        }
+        product.splice(deleteProduct, 1);
+        return product;
+    }
+
 
 module.exports = {
     resetProducts,
     getProducts,
     addProduct,
+    removeProduct,
 }
 
