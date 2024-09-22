@@ -28,9 +28,10 @@ function addProduct (name, price) {
     if (!name) {
         throw new Error ('You must add a name') // Creamos error para que name sea requerido
     } 
-    if (!price || typeof price === 'number' ) {
-        throw new Error ('You must add a price type number') // Creamos error para que el precio sea requerido y sea número
+    if (!price) {
+        throw new Error ('You must add a price') // Creamos error para que el precio sea requerido
     }
+
     const productHeight = products.some(product => product.name === name);
     if(productHeight) {
         throw new Error ('This product is repeated'); // Si el producto existe, lanza un mensaje de error.
@@ -38,7 +39,7 @@ function addProduct (name, price) {
 
     const newProduct = { 
         id: ++id,
-        Nombre: name,
+        Producto: name,
         Precio: price
     }
     products.push(newProduct);
