@@ -62,3 +62,38 @@ describe ('removeProduct', () => {
         expect(() => removeProduct(1)).toThrow('Product not found');
     });
 });
+
+
+/* Ejercicio de clase
+
+//, getProducts, getProduct, updateProduct
+const { resetProducts, addProduct, getProducts, removeProduct} = require('./product');
+
+beforeEach(() => {
+  resetProducts();
+});
+
+describe('add products', () => {
+  it('Should add a products', () => {
+    expect(() => addProduct('producto1', 100)).not.toThrow()
+    expect(getProducts()).toHaveLength(1)
+    expect(getProducts()).toEqual([{id: 0, name: 'producto1', price: 100}])    
+  })
+  it('Should throw an error if the name or price is not defined', () => {
+    expect(() => addProduct()).toThrow()
+  })
+  it('Product exist', () => {
+    addProduct('producto1', 100)
+    expect(() => addProduct('producto1', 100)).toThrow()
+  })
+})
+
+describe('removing products', () => {
+  it('should return error', () => {
+    addProduct('producto1', 100)
+    expect(getProducts()).toHaveLength(1)
+    expect(() => removeProduct(5)).toThrow("El producto no existe")
+  })
+})
+
+*/

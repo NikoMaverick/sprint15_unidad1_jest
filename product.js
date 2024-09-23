@@ -63,3 +63,45 @@ module.exports = {
     removeProduct,
 }
 
+
+/* Ejercicio en clase
+
+let products = []
+let id = 0
+
+const resetProducts = () => {
+  products = []
+  id = 0
+}
+
+const addProduct = (name, price) => {
+  if(!name || !price) {
+    throw new Error("Nombre y precio son requeridos")
+  }
+  if(products.find(product => product.name === name)) {
+    throw new Error("Este producto ya existe")    
+  } 
+  const product = {name, price, id}
+  id++
+  products.push(product)
+}
+
+const getProducts = () => {
+  return products
+}
+
+const removeProduct = (idProduct) => {
+  const product = products.find(element => element.id === idProduct)
+  if(!product) {
+    throw new Error("El producto no existe");
+  }
+  products = products.filter(element => element.id !== idProduct)
+  return products
+}
+
+module.exports = {
+  resetProducts,
+  addProduct,
+  getProducts,
+  removeProduct
+}*/
